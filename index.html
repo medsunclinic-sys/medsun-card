@@ -1,95 +1,162 @@
 <!DOCTYPE html>
-gap:14px;
-margin-top:30px;
-position:relative;
-z-index:2;
+<html lang="uk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MEDSUN</title>
+
+<style>
+body{
+    margin:0;
+    background:#000;
+    color:white;
+    font-family:Arial,sans-serif;
 }
 
-.btn{
-text-decoration:none;
-text-align:center;
-padding:16px;
-border-radius:16px;
-font-size:18px;
-font-weight:700;
-transition:0.2s;
+.container{
+    max-width:480px;
+    margin:auto;
+    min-height:100vh;
+    border:1px solid #2a1200;
+    border-radius:30px;
+    overflow:hidden;
 }
 
-.btn-orange{
-background:#f36d21;
-color:white;
+.hero{
+    padding:50px 30px;
+    text-align:center;
 }
 
-.btn-blue{
-background:#19b5e5;
-color:white;
+.logo{
+    color:#ff6a00;
+    font-size:64px;
+    font-weight:900;
+    letter-spacing:6px;
 }
 
-.btn:hover{
-transform:translateY(-2px);
-opacity:0.95;
+.subtitle{
+    color:#00aaff;
+    letter-spacing:5px;
+    margin-top:10px;
+    font-size:14px;
 }
 
-@media(max-width:520px){
-.name{
-font-size:30px;
+.tagline{
+    margin-top:40px;
+    font-size:24px;
+    line-height:1.5;
+    font-style:italic;
 }
 
-.position{
-font-size:18px;
+.tagline span{
+    color:#ff6a00;
 }
 
-.contact-item{
-font-size:18px;
+.links{
+    padding:20px;
 }
+
+.card{
+    border:1px solid #2a1200;
+    border-radius:25px;
+    padding:25px;
+    margin-bottom:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.card:hover{
+    background:#111;
+    transform:translateY(-3px);
+}
+
+.label{
+    color:#999;
+    margin-bottom:8px;
+    font-size:18px;
+}
+
+.value{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.arrow{
+    color:#ff6a00;
+    font-size:28px;
+}
+
+.footer{
+    text-align:center;
+    padding:40px;
+    color:#777;
 }
 </style>
 </head>
+
 <body>
 
+<div class="container">
+
+<div class="hero">
+<div class="logo">MEDSUN</div>
+<div class="subtitle">ЦЕНТР ЗДОРОВʼЯ</div>
+
+<div class="tagline">
+Бути здоровим — <span>означає бути вільним!</span>
+</div>
+</div>
+
+<div class="links">
+
+<a class="card" href="https://wa.me/380674304704">
+<div>
+<div class="label">WhatsApp</div>
+<div class="value">+380 67 430 47 04</div>
+</div>
+<div class="arrow">→</div>
+</a>
+
+<a class="card" href="https://instagram.com/medsunclinics">
+<div>
+<div class="label">Instagram</div>
+<div class="value">@medsunclinics</div>
+</div>
+<div class="arrow">→</div>
+</a>
+
+<a class="card" href="https://medsunclinic.com.ua">
+<div>
+<div class="label">Сайт</div>
+<div class="value">medsunclinic.com.ua</div>
+</div>
+<div class="arrow">→</div>
+</a>
+
+<a class="card" href="https://t.me/Medsun_bot">
+<div>
+<div class="label">Telegram бот</div>
+<div class="value">@Medsun_bot</div>
+</div>
+<div class="arrow">→</div>
+</a>
+
 <div class="card">
-
-<div class="circle-left"></div>
-<div class="circle-right"></div>
-
-<img src="https://i.imgur.com/2yAfWZg.png" class="logo">
-
-<div class="name">
-Центр здоров’я<br>
-MEDSUN
+<div>
+<div class="label">Локація</div>
+<div class="value">м. Вінниця</div>
 </div>
-
-<div class="position">
-Бути здоровим<br>
-означає бути вільним!
-</div>
-
-<div class="qr-block">
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https://project-uvl84.vercel.app/">
-</div>
-
-<div class="contacts">
-
-<div class="contact-item">
-<span>тел:</span>
-<a href="tel:+380674304704">+38 (067) 430 47 04</a>
-</div>
-
-<div class="contact-item">
-<span>Instagram:</span>
-<a href="https://instagram.com/medsunclinics">@medsunclinics</a>
-</div>
-
-<div class="contact-item">
-<span>site:</span>
-<a href="https://medsunclinic.com.ua">medsunclinic.com.ua</a>
+<div class="arrow">→</div>
 </div>
 
 </div>
 
-<div class="buttons">
-<a class="btn btn-orange" href="https://t.me/Medsun_bot">Telegram Bot</a>
-<a class="btn btn-blue" href="https://maps.app.goo.gl/LRe23mYXUYmch2W76">Відкрити карту</a>
+<div class="footer">
+© MEDSUN — Центр здоровʼя
 </div>
 
 </div>
