@@ -15,7 +15,9 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 }
-
+<a class="floating-btn" href="https://t.me/Medsun_bot">
+📲
+</a>
 body{
 background:#020202;
 font-family:'Montserrat',sans-serif;
@@ -396,7 +398,211 @@ font-size:22px;
 text-align:center;
 padding:22px;
 }
+/* ===== PREMIUM EFFECTS ===== */
 
+body{
+background:
+radial-gradient(circle at top left, rgba(255,106,0,0.12), transparent 35%),
+radial-gradient(circle at bottom right, rgba(0,153,255,0.10), transparent 35%),
+#050505;
+overflow-x:hidden;
+}
+
+/* Glow animation */
+
+.card,
+.service,
+.hero-image{
+animation:fadeUp 0.8s ease forwards;
+opacity:0;
+}
+
+.card:nth-child(1){animation-delay:.1s;}
+.card:nth-child(2){animation-delay:.2s;}
+.card:nth-child(3){animation-delay:.3s;}
+.card:nth-child(4){animation-delay:.4s;}
+.card:nth-child(5){animation-delay:.5s;}
+.card:nth-child(6){animation-delay:.6s;}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* hover glow */
+
+.card:hover,
+.service:hover{
+transform:translateY(-6px) scale(1.02);
+box-shadow:
+0 0 20px rgba(255,106,0,.25),
+0 0 40px rgba(255,106,0,.18),
+0 0 70px rgba(255,106,0,.10);
+border-color:#ff6b00;
+}
+
+/* logo glow */
+
+.logo{
+text-shadow:
+0 0 12px rgba(255,106,0,.8),
+0 0 30px rgba(255,106,0,.5);
+}
+
+/* section title */
+
+.section-title{
+position:relative;
+letter-spacing:2px;
+}
+
+.section-title:before,
+.section-title:after{
+content:"";
+position:absolute;
+top:50%;
+width:80px;
+height:2px;
+background:linear-gradient(to right, transparent, #ff6b00);
+}
+
+.section-title:before{
+left:-90px;
+}
+
+.section-title:after{
+right:-90px;
+transform:rotate(180deg);
+}
+
+/* services perfect center */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+justify-items:center;
+align-items:start;
+}
+
+.service{
+width:100%;
+max-width:190px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+/* service icons */
+
+.service-icon{
+display:flex;
+justify-content:center;
+align-items:center;
+margin:0 auto 16px;
+font-size:42px;
+width:90px;
+height:90px;
+border-radius:50%;
+background:rgba(255,106,0,.08);
+border:1px solid rgba(255,106,0,.25);
+box-shadow:0 0 25px rgba(255,106,0,.15);
+}
+
+/* mobile premium */
+
+@media(max-width:768px){
+
+.hero{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+.hero-image{
+order:-1;
+}
+
+.logo{
+font-size:58px;
+text-align:center;
+}
+
+.tagline{
+font-size:24px;
+line-height:1.25;
+text-align:center;
+}
+
+.cards{
+grid-template-columns:1fr;
+gap:18px;
+}
+
+.services{
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+}
+
+.section-title{
+font-size:17px;
+}
+
+.service{
+padding:18px 10px;
+}
+
+.service-title{
+font-size:15px;
+}
+
+.bottom-banner{
+font-size:22px;
+padding:24px;
+text-align:center;
+}
+
+}
+
+/* floating button */
+
+.floating-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+width:70px;
+height:70px;
+border-radius:50%;
+background:#ff6b00;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:34px;
+text-decoration:none;
+color:white;
+box-shadow:0 0 25px rgba(255,106,0,.6);
+z-index:999;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.08);
+}
+100%{
+transform:scale(1);
+}
+}
 }
 </style>
 </head>
