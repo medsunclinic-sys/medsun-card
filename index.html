@@ -1,99 +1,129 @@
+```html
 <!DOCTYPE html>
 <html lang="uk">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>MEDSUN</title>
+
+<title>MEDSUN — Центр здоровʼя</title>
 
 <style>
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     background:#000;
+    font-family:Arial, sans-serif;
     color:white;
-    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    padding:20px;
 }
 
 .container{
+    width:100%;
     max-width:480px;
-    margin:auto;
-    min-height:100vh;
-    border:1px solid #2a1200;
-    border-radius:30px;
+    border:1px solid rgba(255,106,0,0.2);
+    border-radius:32px;
     overflow:hidden;
+    background:#000;
+    box-shadow:0 0 40px rgba(255,106,0,0.08);
 }
 
-.hero{
-    padding:50px 30px;
+.top{
+    padding:40px 25px 50px;
     text-align:center;
 }
 
-.logo{
-    color:#ff6a00;
-    font-size:64px;
-    font-weight:900;
-    letter-spacing:6px;
+.logo img{
+    width:260px;
+    max-width:90%;
 }
 
 .subtitle{
     color:#00aaff;
-    letter-spacing:5px;
+    letter-spacing:6px;
+    font-size:15px;
     margin-top:10px;
-    font-size:14px;
 }
 
-.tagline{
-    margin-top:40px;
+.quote{
+    margin-top:45px;
     font-size:24px;
     line-height:1.5;
     font-style:italic;
+    font-weight:300;
 }
 
-.tagline span{
-    color:#ff6a00;
+.orange{
+    color:#ff6b00;
 }
 
 .links{
-    padding:20px;
+    padding:0 18px 35px;
 }
 
 .card{
-    border:1px solid #2a1200;
-    border-radius:25px;
-    padding:25px;
-    margin-bottom:20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     text-decoration:none;
     color:white;
-    transition:0.3s;
+    border:1px solid rgba(255,106,0,0.35);
+    border-radius:28px;
+    padding:24px;
+    margin-bottom:22px;
+    transition:0.25s;
+    background:#050505;
 }
 
 .card:hover{
-    background:#111;
-    transform:translateY(-3px);
+    transform:translateY(-4px);
+    border-color:#ff6b00;
+    box-shadow:0 0 25px rgba(255,106,0,0.2);
 }
 
 .label{
-    color:#999;
+    color:#cfcfcf;
+    font-size:16px;
     margin-bottom:8px;
-    font-size:18px;
 }
 
 .value{
-    font-size:20px;
-    font-weight:bold;
+    font-size:19px;
+    font-weight:700;
 }
 
 .arrow{
-    color:#ff6a00;
-    font-size:28px;
+    color:#ff6b00;
+    font-size:30px;
 }
 
 .footer{
     text-align:center;
-    padding:40px;
-    color:#777;
+    padding:35px 20px;
+    border-top:1px solid rgba(255,106,0,0.15);
+    color:#8f8f8f;
+    font-size:15px;
+}
+
+@media(max-width:500px){
+
+    .quote{
+        font-size:18px;
+    }
+
+    .value{
+        font-size:16px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
 }
 </style>
 </head>
@@ -102,64 +132,73 @@ body{
 
 <div class="container">
 
-<div class="hero">
-<div class="logo">MEDSUN</div>
-<div class="subtitle">ЦЕНТР ЗДОРОВʼЯ</div>
+    <div class="top">
 
-<div class="tagline">
-Бути здоровим — <span>означає бути вільним!</span>
-</div>
-</div>
+        <div class="logo">
+            <img src="https://i.imgur.com/8Km9tLL.png" alt="MEDSUN">
+        </div>
 
-<div class="links">
+        <div class="subtitle">
+            ЦЕНТР ЗДОРОВʼЯ
+        </div>
 
-<a class="card" href="https://wa.me/380674304704">
-<div>
-<div class="label">WhatsApp</div>
-<div class="value">+380 67 430 47 04</div>
-</div>
-<div class="arrow">→</div>
-</a>
+        <div class="quote">
+            Бути здоровим — <span class="orange">означає бути вільним!</span>
+        </div>
 
-<a class="card" href="https://instagram.com/medsunclinics">
-<div>
-<div class="label">Instagram</div>
-<div class="value">@medsunclinics</div>
-</div>
-<div class="arrow">→</div>
-</a>
+    </div>
 
-<a class="card" href="https://medsunclinic.com.ua">
-<div>
-<div class="label">Сайт</div>
-<div class="value">medsunclinic.com.ua</div>
-</div>
-<div class="arrow">→</div>
-</a>
+    <div class="links">
 
-<a class="card" href="https://t.me/Medsun_bot">
-<div>
-<div class="label">Telegram бот</div>
-<div class="value">@Medsun_bot</div>
-</div>
-<div class="arrow">→</div>
-</a>
+        <a class="card" href="https://wa.me/380674304704" target="_blank">
+            <div>
+                <div class="label">WhatsApp</div>
+                <div class="value">+380 67 430 47 04</div>
+            </div>
+            <div class="arrow">→</div>
+        </a>
 
-<div class="card">
-<div>
-<div class="label">Локація</div>
-<div class="value">м. Вінниця</div>
-</div>
-<div class="arrow">→</div>
-</div>
+        <a class="card" href="https://instagram.com/medsunclinics" target="_blank">
+            <div>
+                <div class="label">Instagram</div>
+                <div class="value">@medsunclinics</div>
+            </div>
+            <div class="arrow">→</div>
+        </a>
 
-</div>
+        <a class="card" href="https://medsunclinic.com.ua" target="_blank">
+            <div>
+                <div class="label">Сайт</div>
+                <div class="value">medsunclinic.com.ua</div>
+            </div>
+            <div class="arrow">→</div>
+        </a>
 
-<div class="footer">
-© MEDSUN — Центр здоровʼя
-</div>
+        <a class="card" href="https://t.me/Medsun_bot" target="_blank">
+            <div>
+                <div class="label">Telegram бот</div>
+                <div class="value">@Medsun_bot</div>
+            </div>
+            <div class="arrow">→</div>
+        </a>
+
+        <a class="card" href="#" target="_blank">
+            <div>
+                <div class="label">Локація</div>
+                <div class="value">м. Вінниця</div>
+            </div>
+            <div class="arrow">→</div>
+        </a>
+
+    </div>
+
+    <div class="footer">
+        © MEDSUN — Центр здоровʼя
+    </div>
 
 </div>
 
 </body>
 </html>
+```
+
