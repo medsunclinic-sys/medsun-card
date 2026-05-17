@@ -286,7 +286,11 @@ grid-template-columns:1fr;
 }
 
 .services{
-grid-template-columns:1fr 1fr;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:20px;
+justify-items:center;
+align-items:stretch;
 }
 
 .logo{
