@@ -266,7 +266,53 @@ font-size:18px;
 font-size:28px;
 padding:28px;
 }
+@media (max-width: 768px){
 
+.hero{
+grid-template-columns:1fr;
+}
+
+.contacts{
+grid-template-columns:1fr;
+}
+
+.services{
+grid-template-columns:1fr 1fr;
+}
+
+.logo{
+font-size:56px;
+text-align:center;
+}
+
+.tagline{
+font-size:42px;
+text-align:center;
+}
+
+.hero-image{
+margin-top:30px;
+}
+
+.container{
+padding:20px;
+}
+
+.contact-card{
+padding:20px;
+}
+
+.value{
+font-size:16px;
+word-break:break-word;
+}
+
+.bottom-banner{
+font-size:24px;
+text-align:center;
+}
+
+}
 }
 
 </style>
@@ -410,24 +456,31 @@ padding:28px;
 
 <div class="services">
 
-<div class="service">
-<div class="service-icon">🩺</div>
-<div class="service-title">Терапія</div>
-</div>
+<div class="services">
+  <div class="service-card">
+    <div class="service-icon">🩺</div>
+    <div class="service-title">Консультації лікарів</div>
+  </div>
 
-<div class="service">
-<div class="service-icon">🫀</div>
-<div class="service-title">Кардіологія</div>
-</div>
+  <div class="service-card">
+    <div class="service-icon">🧪</div>
+    <div class="service-title">Лабораторна діагностика</div>
+  </div>
 
-<div class="service">
-<div class="service-icon">🧪</div>
-<div class="service-title">Аналізи</div>
-</div>
+  <div class="service-card">
+    <div class="service-icon">🖥️</div>
+    <div class="service-title">Ультразвукова діагностика</div>
+  </div>
 
-<div class="service">
-<div class="service-icon">🖥️</div>
-<div class="service-title">УЗД</div>
+  <div class="service-card">
+    <div class="service-icon">🔬</div>
+    <div class="service-title">Ендоскопічна діагностика</div>
+  </div>
+
+  <div class="service-card">
+    <div class="service-icon">⚕️</div>
+    <div class="service-title">Малоінвазивні процедури</div>
+  </div>
 </div>
 
 </div>
